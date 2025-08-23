@@ -1,0 +1,57 @@
+/* _layout.scss */
+@use 'variaveis';
+@use 'mixins';
+
+.header {
+  @include mixins.centralizar-flex;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 5%;
+  background-color: variaveis.$cor-fundo;
+  align-items: center;
+
+  &__logo {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  &__menu {
+    list-style: none;
+    @include mixins.centralizar-flex;
+    gap: variaveis.$espacamento;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &-item {
+      a {
+        text-decoration: none;
+        color: variaveis.$cor-secundaria;
+        font-weight: bold;
+        transition: color 0.3s;
+        flex: 1 1 auto;
+        text-align: center;
+
+        &:hover {
+          color: variaveis.$cor-primaria;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  padding: 5vh 5%;
+  text-align: center;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    color: variaveis.$cor-texto;
+  }
+}
+

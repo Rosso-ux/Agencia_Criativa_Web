@@ -1,0 +1,64 @@
+/* _componentes.scss */
+@use 'variaveis';
+@use 'mixins';
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__input,
+.contact__textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact__button {
+  @include mixins.botao(variaveis.$cor-secundaria, white);
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: calc(variaveis.$espacamento / 2);
+}
+
+.depoimentos__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ .depoimentos__quote {
+  font-style: italic;
+}
+
+/* Seções */
+
+.section {
+    padding: 5vh 5%;
+}
+
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Serviços */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+  .section__item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    word-wrap: break-word;
+}
